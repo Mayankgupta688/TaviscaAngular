@@ -1,0 +1,25 @@
+{
+  "name": "randomname",
+  "version": "1.1.0",
+  "description": "Generate Random Number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mayankgupta688/TaviscaAngular.git"
+  },
+  "keywords": [
+    "random"
+  ],
+  "author": "Mayank Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mayankgupta688/TaviscaAngular/issues"
+  },
+  "homepage": "https://github.com/Mayankgupta688/TaviscaAngular#readme",
+  "dependencies": {
+    "randomize": "^0.0.4"
+  }
+}
