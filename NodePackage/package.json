@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/Mayankgupta688/TaviscaAngular#readme",
   "dependencies": {
-    "randomize": "^0.0.4"
+    "randomize": "0.0.4"
   }
 }
