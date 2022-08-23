@@ -1,0 +1,5 @@
+<h1 [style.color]="counter % 2 === 0 ? 'green' : 'red'">Counter Value is {{counter}}</h1>
+<h1 [style.border]="counter % 2 === 0 ? '1px solid red' : 'none'">Counter Value is {{counter}}</h1>
+<h1 [style.color]="returnOddOrEven() === 'even' ? 'green' : 'red'">Counter Value is {{counter}}</h1>
+
+<h1 style="color: red" [class.isEven]="counter % 2 === 0">Counter Value is {{counter}}</h1>

@@ -1,3 +1,7 @@
+<div style="margin: 20px">
+    <b style="margin-right: 10px">Filter Employee</b> <input type="text" /><br/><br/>
+</div>
+
 <ng-container *ngFor="let employee of employeeData; index as i">
     <ng-container  *ngIf="+employee.id % 2 === 0 || +employee.id % 2 === 1">
         <div class="card details_container"  style="width: 18rem;">

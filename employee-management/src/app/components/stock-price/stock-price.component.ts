@@ -9,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class StockPriceComponent {
 
   stockPrice: number = 0;
+  colorProperty: string = "markGreen";
+
   constructor(private _http: HttpClient) { 
     setInterval(() => {
-      this._http.get("https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/MC20").subscribe((response: any) => {
+      fetch("https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/MC20").then((response: any) => {
+        if(+this.stockPrice > +response['data']['pricecurrent']) {
+          this.colorProperty = "markRed";
+        } else {
+          this.colorProperty = "markGreen";
+        }
+
         this.stockPrice = response['data']['pricecurrent'];
       })
     }, 5000);
