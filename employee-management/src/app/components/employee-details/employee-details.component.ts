@@ -17,6 +17,7 @@ export class EmployeeDetailsComponent {
   constructor(private _employeeService: EmployeeService) {
     this.employeeData = this._employeeService.employees;
     this.masterEmployeeData = this._employeeService.employees;
+    this._employeeService.getEmployeeList();
 
     this._employeeService.employeeEventEmitter.subscribe((data) => {
       if(data.employee.length) {
@@ -27,7 +28,6 @@ export class EmployeeDetailsComponent {
   } 
 
   filterList(inputValue: any) {
-    debugger;
     this.employeeData = this.masterEmployeeData.filter((employee) => {
       return employee.name.indexOf(inputValue) > -1;
     })
@@ -38,7 +38,6 @@ export class EmployeeDetailsComponent {
   }
 
   deleteEmployeeImmutable(deletedEmployeeId: string) {
-    debugger;
     this._employeeService.deleteEmployee(deletedEmployeeId);
   }
 }

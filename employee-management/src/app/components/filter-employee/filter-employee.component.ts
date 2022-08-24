@@ -16,7 +16,6 @@ export class FilterEmployeeComponent implements OnInit {
   }
 
   filterList(filterValue: string) {
-    debugger;
     this.onFilterText.emit(filterValue)
   }
 

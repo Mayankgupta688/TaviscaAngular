@@ -13,7 +13,6 @@ export class EmployeeCountComponent {
     this.employeeCount = this._employeeService.employees.length;
 
     this._employeeService.employeeEventEmitter.subscribe((data) => {
-      debugger;
       if(data.employee.length) {
         this.employeeCount = data.employee.length;
       }

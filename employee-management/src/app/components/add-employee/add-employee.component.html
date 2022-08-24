@@ -1,0 +1,14 @@
+<div style="margin: 20px">
+
+    <input style="margin-right: 10px" placeholder="Enter Name" [(ngModel)]="userName" type="text" />
+    <input style="margin-right: 10px" placeholder="Enter Id" [(ngModel)]="userId" type="text" />
+    <input style="margin-right: 10px" placeholder="Enter Avatar" [(ngModel)]="userAvatar" type="text" />
+    <input style="margin-right: 10px" placeholder="Enter CreatedAt" [(ngModel)]="userCreatedAt" type="text" />'
+    
+    <input type="button" value="Click To Add" (click)="addEmployee()" /><br/><br/>
+
+    <div style="color: red" *ngIf="errorMessage.length > 0">
+        {{errorMessage}}
+    </div>
+
+</div>

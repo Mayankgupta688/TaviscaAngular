@@ -16,7 +16,6 @@ export class EmployeeInfoComponent {
   constructor() { }
 
   deleteEmployee(empId: string) {
-    debugger;
     this.onDeleteEmployeeImmutable.emit(empId)
   }
 

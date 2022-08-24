@@ -16,6 +16,7 @@ import DelayRenderingDirective from "./app/directives/delay-rendering.directive"
 import ApplyColorDirective from "./app/directives/apply-color.directive";
 import { EmployeeInfoComponent } from './app/components/employee-info/employee-info.component';
 import { FilterEmployeeComponent } from './app/components/filter-employee/filter-employee.component';
+import { AddEmployeeComponent } from './app/components/add-employee/add-employee.component';
 
 
 
@@ -33,7 +34,8 @@ import { FilterEmployeeComponent } from './app/components/filter-employee/filter
         DelayRenderingDirective,
         ApplyColorDirective,
         EmployeeInfoComponent,
-        FilterEmployeeComponent
+        FilterEmployeeComponent,
+        AddEmployeeComponent
     ],
     imports: [
         BrowserModule,

@@ -1,4 +1,6 @@
 <filter-employee (onFilterText)="filterList($event)"></filter-employee>
+<employee-count></employee-count>
+<add-employee></add-employee>
 
 <ng-container *ngFor="let employee of employeeData; index as i">
     <employee-info [empInfo]="employee" [image]="image" (onDeleteEmployeeImmutable)="deleteEmployeeImmutable($event)"></employee-info>
