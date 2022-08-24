@@ -10,14 +10,26 @@ import EmployeeService from 'src/app/services/employee.service';
 export class EmployeeDetailsComponent {
   image: string = "https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg";
   employeeData: IEmployee[] = [];
+  masterEmployeeData: IEmployee[] = [];
+  
+  filterText = "";
+
   constructor(private _employeeService: EmployeeService) {
     this.employeeData = this._employeeService.employees;
+    this.masterEmployeeData = this._employeeService.employees;
 
     this._employeeService.employeeEventEmitter.subscribe((data) => {
-      debugger;
       if(data.employee.length) {
         this.employeeData = data.employee;
+        this.masterEmployeeData = data.employee;
       }
+    })
+  } 
+
+  filterList(inputValue: any) {
+    debugger;
+    this.employeeData = this.masterEmployeeData.filter((employee) => {
+      return employee.name.indexOf(inputValue) > -1;
     })
   }
 

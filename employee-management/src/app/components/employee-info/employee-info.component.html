@@ -1,0 +1,8 @@
+<div class="card details_container" style="width: 18rem;">
+    <img [src]="image" [title]="empInfo.name" class="card-img-top" alt="{{empInfo.name}}">
+    <div class="card-body">
+        <h5 class="card-title">{{empInfo.name}}</h5>
+        <p class="card-text">{{empInfo.id}}: Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <input type="button" (click)="deleteEmployee(empInfo.id)" class="btn btn-primary" value="Immutable {{empInfo.name}}" />
+    </div>
+</div>

@@ -1,16 +1,5 @@
-<div style="margin: 20px">
-    <b style="margin-right: 10px">Filter Employee</b> <input type="text" /><br/><br/>
-</div>
+<filter-employee (onFilterText)="filterList($event)"></filter-employee>
 
 <ng-container *ngFor="let employee of employeeData; index as i">
-    <ng-container  *ngIf="+employee.id % 2 === 0 || +employee.id % 2 === 1">
-        <div class="card details_container"  style="width: 18rem;">
-            <img [src]="image" [title]="employee.name" class="card-img-top" alt="{{employee.name}}">
-            <div class="card-body">
-                <h5 class="card-title">{{employee.name}}</h5>
-                <p class="card-text">{{employee.id}}: Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <input (click)="deleteEmployeeImmutable(employee.id)" type="button" class="btn btn-primary" value="Immutable {{employee.name}}" />
-            </div>
-        </div>
-    </ng-container>
+    <employee-info [empInfo]="employee" [image]="image" (onDeleteEmployeeImmutable)="deleteEmployeeImmutable($event)"></employee-info>
 </ng-container>

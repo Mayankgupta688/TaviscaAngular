@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 import HelloWorldComponent from "./app/components/hello-world/hello-world.component";
 import HelloMayankComponent from "./app/components/hello-mayank/hello-mayank.component";
@@ -13,6 +14,10 @@ import { DynamicStyleComponent } from './app/components/dynamic-style/dynamic-st
 import { UseDirectivesComponent } from './app/components/use-directives/use-directives.component';
 import DelayRenderingDirective from "./app/directives/delay-rendering.directive";
 import ApplyColorDirective from "./app/directives/apply-color.directive";
+import { EmployeeInfoComponent } from './app/components/employee-info/employee-info.component';
+import { FilterEmployeeComponent } from './app/components/filter-employee/filter-employee.component';
+
+
 
 @NgModule({
     declarations: [
@@ -26,11 +31,14 @@ import ApplyColorDirective from "./app/directives/apply-color.directive";
         DynamicStyleComponent,
         UseDirectivesComponent,
         DelayRenderingDirective,
-        ApplyColorDirective
+        ApplyColorDirective,
+        EmployeeInfoComponent,
+        FilterEmployeeComponent
     ],
     imports: [
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     bootstrap: [ 
         EmployeeDetailsComponent
