@@ -1,0 +1,23 @@
+<h1>This is Header Content</h1>
+
+<div id="contentArea">
+    <a style="margin: 10px;" [routerLink]="['/home']">Home</a>
+    <a style="margin: 10px;" [routerLink]="['/help']">Help</a>
+    <a style="margin: 10px;" [routerLink]="['/about', '1']">About 1</a><br/><br/>
+    <a style="margin: 10px;" [routerLink]="['/about', '2']">About 2</a><br/><br/>
+    <a style="margin: 10px;" [routerLink]="['/about', '3']">About 3</a><br/><br/>
+    <a style="margin: 10px;" [routerLink]="['/about', '4']">About 4</a><br/><br/>
+    <a style="margin: 10px;" [routerLink]="['/about', '12']">About 12</a><br/><br/>
+
+    <b>Normal Anchor Tags</b>
+    <nav>
+        <a style="margin: 10px;" href="/home">Home</a>
+        <a style="margin: 10px;" href="/help">Help</a>
+        <a style="margin: 10px;" href="/about">About</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+
+<h2>This is Footer Content</h2>
+
+<app-sample></app-sample>
