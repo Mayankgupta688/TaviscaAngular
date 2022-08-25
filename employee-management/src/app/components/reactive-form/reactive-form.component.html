@@ -1,0 +1,18 @@
+<form style="margin: 10px" [formGroup]="employeeForm" (ngSubmit)="submitFormData()">
+
+    Name: <input type="text" formControlName="userName" /><br/><br/>
+    Id: <input type="text" formControlName="userId" /><br/><br/>
+    Created At: <input type="text" formControlName="userCreatedAt" /><br/><br/>
+    Avatar: <input type="text" formControlName="userAvatar" /><br/><br/>
+
+    <div style="color: red" *ngIf="employeeForm.get('userName')?.invalid">
+        <h4>Please Enter the user userName</h4>
+    </div>
+
+    <div style="color: red" *ngIf="employeeForm.get('userId')?.invalid && (employeeForm.get('userId')?.dirty || employeeForm.get('userId')?.touched)">
+        <h4>Please Enter the correct user id</h4>
+    </div>
+
+    <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+
+</form>

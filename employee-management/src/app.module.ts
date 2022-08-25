@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import HelloWorldComponent from "./app/components/hello-world/hello-world.component";
 import HelloMayankComponent from "./app/components/hello-mayank/hello-mayank.component";
@@ -17,6 +17,11 @@ import ApplyColorDirective from "./app/directives/apply-color.directive";
 import { EmployeeInfoComponent } from './app/components/employee-info/employee-info.component';
 import { FilterEmployeeComponent } from './app/components/filter-employee/filter-employee.component';
 import { AddEmployeeComponent } from './app/components/add-employee/add-employee.component';
+import { UsePipeComponent } from './app/components/use-pipe/use-pipe.component';
+import ConvertUnderscorePipe from "./app/pipes/convert-underscore.pipe";
+import { ParentElementComponent } from './app/components/parent-element/parent-element.component';
+import { ChildElementComponent } from './app/components/child-element/child-element.component';
+import { ReactiveFormComponent } from './app/components/reactive-form/reactive-form.component';
 
 
 
@@ -35,15 +40,21 @@ import { AddEmployeeComponent } from './app/components/add-employee/add-employee
         ApplyColorDirective,
         EmployeeInfoComponent,
         FilterEmployeeComponent,
-        AddEmployeeComponent
+        AddEmployeeComponent,
+        UsePipeComponent,
+        ConvertUnderscorePipe,
+        ParentElementComponent,
+        ChildElementComponent,
+        ReactiveFormComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     bootstrap: [ 
-        EmployeeDetailsComponent
+        ReactiveFormComponent
     ]
 })
 export default class AppModule { }

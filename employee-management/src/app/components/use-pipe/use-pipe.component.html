@@ -1,0 +1,11 @@
+<h1>{{userName | lowercase}}</h1>
+<h1>{{userName | uppercase}}</h1>
+
+<h2>{{salary | currency : "INR"}}</h2>
+
+<h1>Actual Data: {{userName}}</h1>
+
+<h3>{{customPipe}} convert to {{customPipe | convertToSpaces : "-" : "Hello" | lowercase | uppercase}}</h3>
+<h3>{{customPipe1}} convert to {{customPipe1 | convertToSpaces : "_" : "Hi"}}</h3>
+<h3>{{customPipe2}} convert to {{customPipe2 | convertToSpaces : "," : "Technofunnel"}}</h3>
+
